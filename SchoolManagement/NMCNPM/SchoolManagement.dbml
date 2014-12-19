@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="QLDIEMNEW" Class="SchoolManagementDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=CHARLESNGUYEN;Initial Catalog=QLDIEMNEW;Integrated Security=True" SettingsObjectName="NMCNPM.Properties.Settings" SettingsPropertyName="QLDIEMNEWConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.GIAOVIEN" Member="GIAOVIENs">
+    <Type Name="GIAOVIEN">
+      <Column Name="magv" Type="System.String" DbType="VarChar(6) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="tengv" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="gt" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ngaysinh" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="ngayvaolam" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="mamh" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="diachi" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="sdt" Type="System.String" DbType="NVarChar(11)" CanBeNull="true" />
+      <Column Name="hinhanh" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
+    </Type>
+  </Table>
+  <Table Name="dbo.HOCSINH" Member="HOCSINHs">
+    <Type Name="HOCSINH">
+      <Column Name="mahs" Type="System.String" DbType="VarChar(6) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="tenhs" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="gt" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ngaysinh" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="tencha" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="tenme" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="sdt" Type="System.String" DbType="NVarChar(11)" CanBeNull="true" />
+      <Column Name="diachi" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="hinhanh" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LOAINGUOIDUNG" Member="LOAINGUOIDUNGs">
+    <Type Name="LOAINGUOIDUNG">
+      <Column Name="maloai" Type="System.String" DbType="VarChar(4) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="tenloai" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Association Name="LOAINGUOIDUNG_TAIKHOAN" Member="TAIKHOANs" ThisKey="maloai" OtherKey="maloai" Type="TAIKHOAN" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TAIKHOAN" Member="TAIKHOANs">
+    <Type Name="TAIKHOAN">
+      <Column Name="username" Type="System.String" DbType="VarChar(6) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="maloai" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="pass" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Association Name="LOAINGUOIDUNG_TAIKHOAN" Member="LOAINGUOIDUNG" ThisKey="maloai" OtherKey="maloai" Type="LOAINGUOIDUNG" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

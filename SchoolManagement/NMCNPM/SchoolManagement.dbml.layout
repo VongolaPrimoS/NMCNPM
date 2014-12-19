@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="SchoolManagement">
+  <DataContextMoniker Name="/SchoolManagementDataContext" />
+  <nestedChildShapes>
+    <classShape Id="dbfda3aa-f0d3-48bd-abfd-2b2d094564d8" absoluteBounds="2.125, 3.375, 2, 2.5401025390625005">
+      <DataClassMoniker Name="/SchoolManagementDataContext/GIAOVIEN" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ebb2995c-95ce-4f84-aa25-8a542a802b75" absoluteBounds="2.14, 3.835, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="5459e711-61b3-49b9-bc65-0fe892a8c1f9" absoluteBounds="5.125, 3.375, 2, 2.5401025390625005">
+      <DataClassMoniker Name="/SchoolManagementDataContext/HOCSINH" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e1b64099-d938-4e1e-ab1e-0a6e9a0ed781" absoluteBounds="5.1400000000000006, 3.835, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c21b03b5-8903-43da-8440-55024fa33fce" absoluteBounds="2.125, 0.625, 2, 1.1939925130208335">
+      <DataClassMoniker Name="/SchoolManagementDataContext/LOAINGUOIDUNG" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ba8ea713-a3e9-4e54-bd42-60ed3526d9d1" absoluteBounds="2.14, 1.085, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ef824ca3-905b-4aaa-b4cd-6600505fc9db" absoluteBounds="5.625, 1.25, 2, 1.3862939453125">
+      <DataClassMoniker Name="/SchoolManagementDataContext/TAIKHOAN" />
+      <nestedChildShapes>
+        <elementListCompartment Id="25446532-688e-4f83-8665-30a9d3560833" absoluteBounds="5.64, 1.71, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(4.125 : 1.53449625651042); (5.625 : 1.53449625651042)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/SchoolManagementDataContext/LOAINGUOIDUNG/LOAINGUOIDUNG_TAIKHOAN" />
+      <nodes>
+        <classShapeMoniker Id="c21b03b5-8903-43da-8440-55024fa33fce" />
+        <classShapeMoniker Id="ef824ca3-905b-4aaa-b4cd-6600505fc9db" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
