@@ -11,6 +11,8 @@
       <Column Name="diachi" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="sdt" Type="System.String" DbType="NVarChar(11)" CanBeNull="true" />
       <Column Name="hinhanh" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="MONHOC_GIAOVIEN" Member="MONHOC" ThisKey="mamh" OtherKey="mamh" Type="MONHOC" IsForeignKey="true" />
+      <Association Name="PHANCONG_GIAOVIEN" Member="PHANCONG" ThisKey="magv" OtherKey="magv" Type="PHANCONG" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.HOCSINH" Member="HOCSINHs">
@@ -39,6 +41,27 @@
       <Column Name="maloai" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
       <Column Name="pass" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
       <Association Name="LOAINGUOIDUNG_TAIKHOAN" Member="LOAINGUOIDUNG" ThisKey="maloai" OtherKey="maloai" Type="LOAINGUOIDUNG" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="" Member="MONHOCs">
+    <Type Name="MONHOC">
+      <Column Member="mamh" Type="System.String" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Member="tenmh" Type="System.String" CanBeNull="false" />
+      <Column Member="sotiet" Type="System.String" CanBeNull="false" />
+      <Column Member="heso" Type="System.String" CanBeNull="false" />
+      <Association Name="MONHOC_GIAOVIEN" Member="GIAOVIENs" ThisKey="mamh" OtherKey="mamh" Type="GIAOVIEN" />
+    </Type>
+  </Table>
+  <Table Name="" Member="PHANCONGs">
+    <Type Name="PHANCONG">
+      <Column Member="mapc" Type="System.String" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Member="malop" Type="System.String" CanBeNull="false" />
+      <Column Member="mamh" Type="System.String" CanBeNull="false" />
+      <Column Member="magv" Type="System.String" CanBeNull="false" />
+      <Column Member="mahk" Type="System.String" CanBeNull="false" />
+      <Column Member="makl" Type="System.String" CanBeNull="false" />
+      <Column Member="manh" Type="System.String" CanBeNull="false" />
+      <Association Name="PHANCONG_GIAOVIEN" Member="GIAOVIENs" ThisKey="magv" OtherKey="magv" Type="GIAOVIEN" />
     </Type>
   </Table>
 </Database>
