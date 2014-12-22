@@ -22,19 +22,14 @@ namespace NMCNPM.Class
             get { return _iPassword; }
             set 
             {
-                if (value != "")
-                {
-                    _iPassword = value;
-                }
-                //else
-                //{
-                //    _iPassword = "bb";
-                //} 
-                if (value==null)
+                if (value == null)
                 {
                     _iPassword = "";
                 }
-               // _iPassword = "asd";
+                if (value != "")
+                {
+                    _iPassword = value;
+                } 
             }
         }
         private String _iMaLoai;
